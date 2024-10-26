@@ -1,0 +1,188 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: white;
+  color: black;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Navigation Styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+}
+
+#name span {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.nav-menu {
+  display: flex;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+li {
+  margin: 0 10px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+}
+
+a:hover {
+  color: #f0a500;
+}
+
+/* Mobile Navigation Icon */
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Home Page Section */
+#home-page-parent {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 100px;
+  height: 100vh;
+}
+
+#introduction {
+  max-width: 600px;
+  text-align: center;
+}
+
+#introduction h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+#introduction h2 {
+  font-size: 1.8rem;
+  color: #666;
+}
+
+img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* Responsive Styles */
+
+/* Small screens (up to 600px) */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Hide the menu on mobile and show only the icon */
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Show the menu icon */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Toggle visibility for the nav menu */
+  .nav-menu.show {
+    display: flex;
+  }
+
+  ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #home-page-parent {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  #introduction h1 {
+    font-size: 2rem;
+  }
+
+  #introduction h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Medium screens (tablets, 601px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  nav {
+    padding: 15px 30px;
+  }
+
+  #home-page-parent {
+    padding: 30px;
+    flex-direction: row;
+  }
+
+  #introduction h1 {
+    font-size: 2.2rem;
+  }
+
+  #introduction h2 {
+    font-size: 1.6rem;
+  }
+
+  img {
+    max-width: 300px;
+  }
+}
+
+/* Large screens (desktops, 901px and above) */
+@media (min-width: 901px) {
+  nav {
+    padding: 20px 40px;
+  }
+
+  #home-page-parent {
+    padding: 60px;
+    justify-content: space-between;
+  }
+
+  #introduction h1 {
+    font-size: 3rem;
+  }
+
+  #introduction h2 {
+    font-size: 2rem;
+  }
+
+  img {
+    max-width: 350px;
+  }
+}
